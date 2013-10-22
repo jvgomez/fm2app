@@ -3,6 +3,9 @@ V1.0: 22/10/2013
 Javier V. Gómez
 www.javiervgomez.com
 
+Creative Commons 3.0 Attribution, Share-Alike
+http://creativecommons.org/licenses/by-sa/3.0/
+
 ------------------------
 DISCLAIMER:
 ------------------------
