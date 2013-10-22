@@ -31,6 +31,10 @@
 %
 %   o times:  double scalar, fm2times(1) is the time employed to compute fm2F,
 %                            fm2times(2) is the time employed to compute fm2T and path.
+%
+%
+%   This function depends on Gabriel Peyré's Fast Marching Toolbox and 
+%   other functions such as trimpath and FM2_VelocitiesMap.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [F, T, path, vels, times] = FM2(map, sat, start, goal)

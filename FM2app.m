@@ -432,7 +432,8 @@ switch what_to_save
                 case 5
                     axes_to_save = handles.fm2vels_axes;
             end
-
+            
+            % TODO : does not save properly the figures.
             %Runs the export_fig command with the path and file name, along with the 
             %filetype 
             export_fig(axes_to_save,[path,file],['-',filetype], '-transparent');
