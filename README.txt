@@ -36,7 +36,7 @@ and then open FM2app.fig file and press the play button (ctrl+T).
 
 Data is structured as follows:
 - Algorithms: Main FM2 algorithms, this is the most important part of the code. It is ready to be used out of the Matlab GUI.
-- Examples: Matlab functions using the main algorithms in Algorithms/ to show their use without the GUI.
+- Examples: ready-to-run Matlab functions using the main algorithms in Algorithms/ to show their use without the GUI.
 - Data: maps and useful data to test the algorithms.
 - fm2tools: auxiliar functions of common use together with FM2 code.
 - guitools: scripts which help to make clear the FM2app.m code.
