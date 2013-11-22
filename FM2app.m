@@ -232,7 +232,7 @@ function fm2loaddata_pushbutton_Callback(hObject, eventdata, handles)
 
 set(handles.fm2start_text, 'String', 'Start: ');
 set(handles.fm2goal_text, 'String', 'Goal: ');
-
+disp('Hola')
 fm2openGUI;
 
 % --- Executes on button press in fm2sg_pushbutton.
