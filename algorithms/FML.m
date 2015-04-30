@@ -37,8 +37,12 @@
 
 function [F, T, end_point, dx, dy] = FML (map, demos, sat, aoi_size)
 % Preparing variables.
+global fmLF_axes
 [F_nosat, t]= FM2_VelocitiesMap(map',sat); % Initial velocities map normalized.
+
 F_init  = min(sat, F_nosat);      % Velocities map saturated.
+
+
 
 F = F_init;                     % Final velocities map.
 Fpo = ones(size(F));            % Map with reconstructed paths.
@@ -67,15 +71,22 @@ for k = 1:n
     end
 end
 
+
+
 % Dilating and "fuzzying" the learned path.
 SE = strel('disk', aoi_size);
 Fpo = imdilate(~Fpo, SE);
-[Wp, t2] = FM2_VelocitiesMap(Fpo, 1-sat);
+[Wp, t2] = FM2_VelocitiesMap(Fpo, sat);%1-sat
+
 F = F + Wp;
+
+
 
 % Obstacle reposition. It can happen that learning removes some of this
 % info, restored here.
 F(zero_index) = 0;
+
+
 
 % Computing T, the reproductions field.
 end_point = zeros(2,1);
@@ -88,8 +99,15 @@ end_point = end_point ./n;
 options.end_points  = [];
 [T,~] = perform_fast_marching(F, end_point, options);
 
+
+
 % Removing discontinuities of FML.
 [dx,dy] = gradient(T', 1,1);
 dy(dy < -1) = 0;
 dy(dy >  9999) = 0;
 dx(dx < -1) = 0;
+
+
+
+
+

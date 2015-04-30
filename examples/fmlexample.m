@@ -14,9 +14,9 @@ end
 
 
 % Parameters:
-n = 1;                     % Number of demonstrations.
-mapname = '../data/map_obs.png';   % Map the learning will learn over.
-sat = 0.05;                % Saturation, between 0 and 1.
+n = 5;                     % Number of demonstrations.
+mapname = 'fmMaster/data/map_obs.png';   % Map the learning will learn over.
+sat = 0.00;                % Saturation, between 0 and 1.
 aoi_size = 50;             % Pixels of the area of influence.
  
 % Initialization.
@@ -41,7 +41,7 @@ for i = 1:n
     starts(:, i) = start_point;
     paths{i} = path;
 end
-    
+
 % Plotting results.
 imagesc(map);
 colormap gray(256);
@@ -65,3 +65,5 @@ plot(end_point(1),end_point(2),'k*','markersize',15,'linewidth',3);
 set(gca,'xtick',[], 'ytick',[]);
 hold off;
 axis image
+
+
