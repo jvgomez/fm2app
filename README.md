@@ -1,7 +1,7 @@
 FM2app 
 
 V2.0: 01/10/2014
-David Palomo's B.Sc. Thesis
+David Palomo's [B.Sc. Thesis](http://javiervgomez.com/pages/matlab-graphical-user-interface-to-fast-marching-square-algorithms.html)
 
 V1.0: 22/10/2013
 Javier V. Gómez
